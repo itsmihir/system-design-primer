@@ -455,9 +455,13 @@ In a distributed computer system, you can only support two of the following guar
 
 #### CP - consistency and partition tolerance
 
+In context of DB and replication, we write to master and wait till replication nodes are updated. After all the nodes are updated we send ok.
+
 Waiting for a response from the partitioned node might result in a timeout error.  CP is a good choice if your business needs require atomic reads and writes.
 
 #### AP - availability and partition tolerance
+
+In context of DB and replication, we write to master and send ok. And we asynchronously send the update to the replications. Replication node might be inconsistent for some time.
 
 Responses return the most readily available version of the data available on any node, which might not be the latest.  Writes might take some time to propagate when the partition is resolved.
 
