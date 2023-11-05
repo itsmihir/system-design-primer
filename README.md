@@ -610,6 +610,10 @@ Services such as [CloudFlare](https://www.cloudflare.com/dns/) and [Route 53](ht
 * [Latency-based](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency)
 * [Geolocation-based](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-geo)
 
+**Zones**
+  A DNS Zone is a portion of the DNS namespaces that is managed by a specific organisation or administrator.
+  for example a company can have an app and a wesbsite with different server (different IP). We can divide the app.myCompany and web.myCompany into different zones.
+
 ### Disadvantage(s): DNS
 
 * Accessing a DNS server introduces a slight delay, although mitigated by caching described above.
