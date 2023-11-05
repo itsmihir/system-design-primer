@@ -620,6 +620,25 @@ Services such as [CloudFlare](https://www.cloudflare.com/dns/) and [Route 53](ht
 
  [zones and delegations](https://www.youtube.com/watch?v=JIwi6ii-rzI) 
 
+### Type of zones
+  * Primary is a zone to which all updates for the records that belong to that zone are made
+  * Secondary zone is a read-only copy of the primary zone.
+  * Stub zone.
+
+#### Primary and Secondary zone
+  * Any changes made to the primary zone file are replicated to the secondary zone file
+  * Because a DNS server can host multiple zones, it can therefore host both a primary zone (which has the writeable copy of a zone file) and a separate secondary zone (which obtains a read-only copy of a zone file).
+  * A DNS server hosting a primary zone is said to be the primary DNS server for that zone
+  * A DNS server hosting a secondary zone is said to be the secondary DNS server for that zone.
+
+
+### Zone transfer 
+  * The process of replicating a zone file to multiple DNS servers is called zone transfer.
+  * Zone transfer is achieved by copying the zone file from one DNS server to another DNS server.
+  * Zone transfers can be made from both primary and secondary DNS servers.
+
+[practical of zone transfer](https://www.youtube.com/watch?v=EpfHhEGz35I)
+
 ### Disadvantage(s): DNS
 
 * Accessing a DNS server introduces a slight delay, although mitigated by caching described above.
